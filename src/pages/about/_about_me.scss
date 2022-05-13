@@ -1,0 +1,28 @@
+.about_me_section{
+  padding-top: 100px;
+  width: 100vw;
+  height: 100vh;
+  background: $color-bg;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.image_container{
+  background: rgb(77,181,255);
+  background: radial-gradient(circle, rgba(77,181,255,0.5) 35%, rgba(77,181,255,0.15) 77%, rgba(77,181,255,0.05) 88%, rgba(77,181,255,0) 95%);
+  height: 50%;
+  border-radius: 20px;
+}
+
+.image_container img{
+  transform: rotate(20deg);
+
+  border-radius: 20px;
+  transition: 1.5s;
+
+}
+
+.image_container img:hover{
+  transform: rotate(0deg);
+}

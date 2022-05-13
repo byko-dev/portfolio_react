@@ -1,0 +1,210 @@
+.home_container{
+  background: $color-bg;
+  width: 100%;
+  height: 100vh;
+}
+
+.home_header{
+  width: 100%;
+  padding-top: 50px;
+  height: 20%;
+  text-align: center;
+
+  span{
+    color: purple;
+  }
+
+  h3, h1, h4{
+    padding-top: 10px;
+  }
+
+  h4{
+    color: $color-light;
+  }
+}
+
+.buttons_group{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 60px;
+}
+
+@mixin button($background: $color-primary, $border-color: $color-primary, $font-color: white){
+  background: $background;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  padding: 18px 30px;
+  color: $font-color;
+  transition: 1s;
+}
+
+.button1{
+  @include button(none, $color-primary, $color-primary);
+}
+
+.button2{
+  @include button($color-primary, $color-primary, $color-bg);
+}
+
+.button1:hover, .button2:hover{
+  background: $color-white;
+  border-color: $color-white;
+  color: $color-bg;
+}
+
+.vertical_icons {
+  color: $color-primary;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  gap: 10px;
+}
+
+.home_content{
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+
+  img {
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    height: 80%;
+    background: rgb(77,181,255);
+    background: linear-gradient(0deg, rgba(77,181,255,0) 7%, rgba(77,181,255,0.1) 25%, rgba(77,181,255,0.5) 45%, rgba(77,181,255,0.7) 65%, rgba(77,181,255,0.8) 80%, rgba(77,181,255,1) 97%);
+    border-radius: 45% 45% 0 0;
+  }
+
+  p{
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    color: $color-primary;
+  }
+}
+
+.photo_background{
+  height: 600px;
+}
+
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+@mixin circlesElement($left: 25%, $width: 30px, $height: 30px, $delay: 0s){
+  left: $left;
+  width: $width;
+  height: $height;
+  animation-delay: $delay;
+}
+
+.circles li:nth-child(1){
+  @include circlesElement(25%, 80px, 80px, 0s);
+}
+.circles li:nth-child(2){
+  @include circlesElement(10%, 20px, 20px, 2s);
+  animation-duration: 12s;
+}
+.circles li:nth-child(3){
+  @include circlesElement(70%, 20px, 20px, 4s);
+}
+.circles li:nth-child(4){
+  @include circlesElement(40%, 60px, 60px, 0s);
+  animation-duration: 18s;
+}
+.circles li:nth-child(5){
+  @include circlesElement(65%, 20px, 20px, 0s);
+}
+.circles li:nth-child(6){
+  @include circlesElement(75%, 110px, 110px, 3s);
+}
+.circles li:nth-child(7){
+  @include circlesElement(35%, 150px, 150px, 7s);
+}
+.circles li:nth-child(8){
+  @include circlesElement(50%, 25px, 25px, 15s);
+  animation-duration: 45s;
+}
+.circles li:nth-child(9){
+  @include circlesElement(20%, 15px, 15px, 2s);
+  animation-duration: 35s;
+}
+.circles li:nth-child(10){
+  @include circlesElement(85%, 150px, 150px, 0s);
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100%{
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: $large-screen-size) {
+  .photo_background{
+    height: 450px;
+  }
+
+  .home_content{
+    padding-top: 0px;
+    height: 400px;
+  }
+
+}
+
+@media (max-width: $small-screen-size) {
+  .home_header{
+    padding-top: 30px;
+    h3, h1, h4{
+      padding-top: 0px;
+    }
+  }
+
+  .buttons_group{
+    padding-top: 50px;
+    height: 45px;
+    button{
+      padding: 10px 20px;
+    }
+  }
+
+  .home_content{
+    height: 30%;
+    padding-top: 20px;
+    img{
+      padding-bottom: 100px;
+      padding-top: 30px;
+    }
+
+  }
+  .photo_background{
+      height: 300px;
+  }
+}
