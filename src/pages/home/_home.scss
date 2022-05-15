@@ -1,13 +1,15 @@
 .home_container{
-  background: $color-bg;
   width: 100%;
-  height: 100vh;
+  height: 1000px;
+  position: relative;
+  display: block;
+  z-index: 1;
 }
 
 .home_header{
   width: 100%;
   padding-top: 50px;
-  height: 20%;
+  height: 200px;
   text-align: center;
 
   span{
@@ -38,6 +40,7 @@
   padding: 18px 30px;
   color: $font-color;
   transition: 1s;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .button1{
@@ -63,6 +66,7 @@
 }
 
 .home_content{
+  margin-top: 50px;
   width: 100%;
   height: 600px;
   display: flex;
@@ -70,13 +74,7 @@
   align-items: end;
 
   img {
-    margin-top: 100px;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    height: 80%;
-    background: rgb(77,181,255);
-    background: linear-gradient(0deg, rgba(77,181,255,0) 7%, rgba(77,181,255,0.1) 25%, rgba(77,181,255,0.5) 45%, rgba(77,181,255,0.7) 65%, rgba(77,181,255,0.8) 80%, rgba(77,181,255,1) 97%);
-    border-radius: 45% 45% 0 0;
+    height: 450px;
   }
 
   p{
@@ -87,15 +85,23 @@
 }
 
 .photo_background{
+  //padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 600px;
+  background: rgb(77,181,255);
+  background: linear-gradient(0deg, rgba(77,181,255,0) 7%, rgba(77,181,255,0.1) 25%, rgba(77,181,255,0.5) 45%, rgba(77,181,255,0.7) 65%, rgba(77,181,255,0.8) 80%, rgba(77,181,255,1) 97%);
+  border-radius: 45% 45% 0 0;
 }
 
 .circles{
+  background: $color-bg;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 1000px;
   overflow: hidden;
 }
 
@@ -173,10 +179,12 @@
   }
 
   .home_content{
-    padding-top: 0px;
-    height: 400px;
-  }
+    height: 450px;
 
+    img{
+      height: 350px;
+    }
+  }
 }
 
 @media (max-width: $small-screen-size) {
@@ -188,23 +196,25 @@
   }
 
   .buttons_group{
-    padding-top: 50px;
     height: 45px;
     button{
       padding: 10px 20px;
     }
   }
 
+  .home_container, .circles{
+    height: 700px;
+  }
+
   .home_content{
-    height: 30%;
-    padding-top: 20px;
+    height: 400px;
+    margin-top: 0px;
     img{
-      padding-bottom: 100px;
-      padding-top: 30px;
+      height: 250px;
     }
 
   }
   .photo_background{
-      height: 300px;
+      height: 350px;
   }
 }

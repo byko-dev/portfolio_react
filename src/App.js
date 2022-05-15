@@ -1,15 +1,17 @@
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import AboutMe from "./pages/about/AboutMe";
+import MySkills from "./pages/skills/MySkills";
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
         <Home />
         <Navbar />
         <AboutMe />
-    </div>
+        <MySkills />
+    </main>
   );
 }
-
+//
 export default App;
