@@ -16,21 +16,21 @@ const Home = () => {
 
                 <div className="buttons_group">
                     <Button filled={false} size={"big"}> Download CV </Button>
-                    <Button filled={true} size={"big"}> Let's Talk </Button>
+                    <Button filled={true} size={"big"} onClick={() => window.location="#contact"}> Let's Talk </Button>
                 </div>
 
                 <div className="home_content">
                     <div className="vertical_icons">
-                        <a href="https://www.linkedin.com/in/byko-dev/"><BsLinkedin /></a>
-                        <a href="https://github.com/byko-dev"><BsGithub /></a>
-                        <a><FaTwitterSquare /></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/byko-dev/"><BsLinkedin /></a>
+                        <a target="_blank" href="https://github.com/byko-dev"><BsGithub /></a>
+                        <a target="_blank" href="https://twitter.com/bykodev"><FaTwitterSquare /></a>
                     </div>
 
                     <div className="photo_background">
                         <img src={myPhoto}></img>
                     </div>
 
-                    <p>Scroll down</p>
+                    <a href="#footer">Scroll down</a>
                 </div>
             </div>
 

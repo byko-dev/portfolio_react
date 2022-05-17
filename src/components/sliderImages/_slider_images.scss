@@ -4,12 +4,8 @@
   height: 10px;
   background: $color-light;
   cursor: pointer;
-  transition: 1s;
   margin-left: 5px;
 }
-
-.slider_indicator.active{
-  background: $color-primary;
-}
+.slider_indicator.active{background: $color-primary;}
 
 

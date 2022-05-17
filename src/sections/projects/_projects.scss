@@ -1,6 +1,6 @@
 .section_projects{
   width: 100%;
-  height: 800px;
+  height: auto;
   background: $color-bg;
   text-align: center;
   padding-top: 50px;
@@ -15,6 +15,7 @@
 }
 
 .container_projects{
+  margin-top: 50px;
   width: 100%;
   display: flex;
   justify-content: center;

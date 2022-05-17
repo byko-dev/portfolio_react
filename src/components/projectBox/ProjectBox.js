@@ -10,10 +10,10 @@ const ProjectBox = ({children, title, description, githubLink, backendLink, demo
             </div>
             <h4>{title}</h4>
             <p>{description}</p>
-            <div>
-                <Button filled={true} onClick={() => window.location.href = githubLink}>Github</Button>
-                {backendLink == undefined? <Button  filled={false} className="button2" onClick={() => window.location.href = backendLink}>Github backend</Button>: <></>}
-                {demoLink == undefined? <Button filled={false} className="button1" onClick={() => window.location.href = demoLink}>Live Demo</Button> : <></>}
+            <div className="project_button_group">
+                {demoLink != undefined? <Button size="small" filled={false} onClick={() => window.location.href = demoLink}>Live Demo</Button> : <></>}
+                {backendLink != undefined? <Button size="small" filled={false} onClick={() => window.location.href = backendLink}>Github backend</Button>: <></>}
+                <Button size="small" filled={true} onClick={() => window.location.href = githubLink}>Github</Button>
             </div>
         </div>
     )
