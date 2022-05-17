@@ -1,0 +1,31 @@
+.container_simple_box{
+  width: 250px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 20px;
+  background: $color-bg-variant;
+
+
+  svg{
+    font-size: 30px;
+    margin: 10px;
+  }
+
+  a{
+    text-decoration: none;
+    color: $color-primary;
+    font-size: 13px;
+    margin: 8px;
+  }
+
+  h5{
+    color: $color-light;
+  }
+
+
+
+}

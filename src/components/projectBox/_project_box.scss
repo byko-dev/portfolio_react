@@ -1,0 +1,38 @@
+.container_project_box{
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  border: 1px solid $color-light;
+  background: $color-bg-variant;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  h4, p{
+    padding: 0 10px 0 10px;
+  }
+
+}
+
+.container_project_box:hover{
+  background: none;
+}
+
+.photo_project_box{
+  width: 350px;
+  height: auto;
+  overflow: hidden;
+  //border-radius: 20px;
+  //background: rgb(77,181,170);
+ // background: linear-gradient(90deg, rgba(77,181,170,1) 0%, rgba(77,181,255,1) 61%, rgba(44,44,108,1) 100%);
+
+  img{
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}

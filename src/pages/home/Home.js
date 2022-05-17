@@ -2,6 +2,7 @@ import React from "react";
 import myPhoto from "../../assets/me.png";
 import {BsLinkedin, BsGithub} from "react-icons/bs";
 import {FaTwitterSquare} from "react-icons/fa";
+import Button from "../../components/button/Button";
 const Home = () => {
 
     return (<section>
@@ -14,8 +15,8 @@ const Home = () => {
                 </div>
 
                 <div className="buttons_group">
-                    <button className="button1"> Download CV </button>
-                    <button className="button2"> Let's Talk </button>
+                    <Button filled={false} size={"big"}> Download CV </Button>
+                    <Button filled={true} size={"big"}> Let's Talk </Button>
                 </div>
 
                 <div className="home_content">
@@ -34,8 +35,6 @@ const Home = () => {
             </div>
 
             <ul className="circles">
-
-
                 {Array.apply(0, Array(10)).map(function (x, i) {
                     return <li key={i} />;
                 })}

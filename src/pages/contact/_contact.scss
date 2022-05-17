@@ -1,0 +1,89 @@
+.section_contact{
+  width: 100%;
+  height: auto;
+  background: $color-bg;
+  text-align: center;
+  padding-top: 100px;
+
+  h4{
+    color: $color-light;
+  }
+
+  h2{
+    color: $color-primary;
+  }
+
+}
+
+.container_contact{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 50px;
+  transition: 1s;
+}
+
+.form_contact{
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  input {
+    padding-left: 20px;
+    font-size: 15px;
+    border: 2px solid $color-primary;
+    background: none;
+    border-radius: 10px;
+    min-height: 60px;
+  }
+
+  textarea{
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    border: 2px solid $color-primary;
+    background: none;
+    border-radius: 10px;
+  }
+
+  button{
+    max-width: 180px;
+  }
+
+}
+
+.cards_container{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media (max-width: $big-screen-size){
+  .container_contact{
+    gap: 20px;
+  }
+}
+
+@media (max-width: $large-screen-size){
+  .container_contact{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 40px;
+  }
+  .cards_container{
+    gap: 30px;
+  }
+  .form_contact{
+    width: 90%;
+  }
+
+}
+
+
+
+
+
