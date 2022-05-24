@@ -15,7 +15,7 @@ const Home = () => {
                 </div>
 
                 <div className="buttons_group">
-                    <Button filled={false} size={"big"}> Download CV </Button>
+                    <Button filled={false} size={"big"} onClick={() => window.open("/cv.pdf", '_blank')}> Download CV </Button>
                     <Button filled={true} size={"big"} onClick={() => window.location="#contact"}> Let's Talk </Button>
                 </div>
 

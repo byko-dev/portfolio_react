@@ -15,7 +15,7 @@ const MySkills = () => {
             <h2>My Experience</h2>
 
             <div className="skills_section">
-                <div className="skills_box">
+                <div className="skills_box" data-aos="zoom-in-right">
                     <h1> Frontend</h1>
 
                     <div className="skills">
@@ -27,13 +27,10 @@ const MySkills = () => {
 
                     </div>
 
-
-
-
                 </div>
 
 
-                <div className="skills_box">
+                <div className="skills_box" data-aos="zoom-in-left">
                     <h1>Backend</h1>
 
                     <div className="skills">
